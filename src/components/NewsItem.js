@@ -8,13 +8,13 @@ export default class NewsItem extends Component {
     return (
       <div className='my-3'>
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={imageUrl} />
+          <Card.Img variant="top" src={!imageUrl?"https://cdn.siasat.com/wp-content/uploads/2020/01/dementia.jpg":imageUrl} style={{height:'200px'}}/>
           <Card.Body>
-            <Card.Title>{title}</Card.Title>
+            <Card.Title>{title}...</Card.Title>
             <Card.Text>
-             {description}
+             {description}...
             </Card.Text>
-            <Button variant="/newsdetail">Read More</Button>
+            <Button variant="primary" href={newsUrl} target='_blank' >Read More</Button>
           </Card.Body>
         </Card>
       </div>
