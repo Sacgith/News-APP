@@ -1,9 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navb from "./components/Navb";
 import News from "./components/News";
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
+  const pageSize = 6;
   return (
     <>
       <Router>
@@ -15,7 +16,7 @@ function App() {
             element={
               <News
                 key="business"
-                pageSize={5}
+                pageSize={pageSize}
                 country="in"
                 category="business"
               />
@@ -27,7 +28,7 @@ function App() {
             element={
               <News
                 key="entertainment"
-                pageSize={5}
+                pageSize={pageSize}
                 country="in"
                 category="entertainment"
               />
@@ -37,7 +38,12 @@ function App() {
             exact
             path="/health"
             element={
-              <News key="health" pageSize={5} country="in" category="health" />
+              <News
+                key="health"
+                pageSize={pageSize}
+                country="in"
+                category="health"
+              />
             }
           />
           <Route
@@ -46,7 +52,7 @@ function App() {
             element={
               <News
                 key="science"
-                pageSize={5}
+                pageSize={pageSize}
                 country="in"
                 category="science"
               />
@@ -56,7 +62,12 @@ function App() {
             exact
             path="/sports"
             element={
-              <News key="sports" pageSize={5} country="in" category="sports" />
+              <News
+                key="sports"
+                pageSize={pageSize}
+                country="in"
+                category="sports"
+              />
             }
           />
           <Route
@@ -65,7 +76,7 @@ function App() {
             element={
               <News
                 key="technology"
-                pageSize={5}
+                pageSize={pageSize}
                 country="in"
                 category="technology"
               />
@@ -77,7 +88,7 @@ function App() {
             element={
               <News
                 key="general"
-                pageSize={5}
+                pageSize={pageSize}
                 country="in"
                 category="general"
               />
@@ -89,7 +100,7 @@ function App() {
             element={
               <News
                 key="general"
-                pageSize={5}
+                pageSize={pageSize}
                 country="in"
                 category="general"
               />
